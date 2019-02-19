@@ -1,3 +1,11 @@
+# Materi
+1. [Pengenalan](#pengenalan)
+2. [Instalasi](#instalasi)
+4. [Konsep](#konsep)
+3. [CLI](#command-line-interface)
+5. [Networking](#networking)
+6. [Penggunaan Aplikasi]
+
 # Pengenalan
 Sub-materi
 1. [Pengertian Linux](#1-pengertian-linux)
@@ -242,7 +250,7 @@ Tidak semua paket software langsung ada di repository, itu sebabnya kita harus t
 
 <div style="page-break-after: always;"></div>
 
-# Command Line Interface (CLI)
+# Command Line Interface 
 Sub-Materi
 1. [Basic Command](#1-basic-command)
 2. [Administrative Command](#2-administrative-command)
@@ -253,22 +261,22 @@ Sub-Materi
 
 ### 1. Basic Command
 ##### 1. pwd
-*print working directory*. Untuk mengetahui di directory mana kita berada sekarang.
+*print working directory*. Untuk mengetahui di directory mana kita berada sekarang.  
 ![pwd](img/pwd.png)
 
 ##### 2. ls
-*list*. Untuk menampilkan file-file apa saja yang ada di suatu directory.
+*list*. Untuk menampilkan file-file apa saja yang ada di suatu directory.  
 ![ls](img/ls.png)  
 Parameter yang sering dipakai pada perintah ls adalah `-a` dan `-l`.
-- Saat menggunakan parameter `-a` maka semua file akan ditampikan, termasuk yang *hidden* (diawali dengan `.`).
+- Saat menggunakan parameter `-a` maka semua file akan ditampikan, termasuk yang *hidden* (diawali dengan `.`).  
 ![ls -a](img/ls_a.png)
-- Sedangkan parameter `-l` menampilkan file yang tidak *hidden* dalam format *long-list*.
+- Sedangkan parameter `-l` menampilkan file yang tidak *hidden* dalam format *long-list*.  
 ![ls -l](img/ls_l.png)
 
 ##### 3. man
 *manuals*. Digunakan untuk melihat fungsi dan parameter dari suatu comman
 Contoh `man ls` akan menampilkan manual penggunaan command `ls`.
-Untuk keluar dari tampilan manual tersebut kita tinggal menekan tombol `q`.
+Untuk keluar dari tampilan manual tersebut kita tinggal menekan tombol `q`.  
 ![man](img/manls.png)
 
 ##### 4. cd
@@ -283,48 +291,48 @@ Contoh lain:
  
 ##### 5. mkdir
 *make directory*. Digunakan untuk membuat sebuah directory (folder).
-Syntax-nya adalah ```mkdir [namadirectory]```
+Syntax-nya adalah ```mkdir [namadirectory]```  
 ![mkdir](img/mkdir.png)
 
 ##### 6. cp
 *copy*. Digunakan untuk menyalin (meng-copy) file.
-Syntax-nya adalah ```cp [namafile] [namacopyannya]```
+Syntax-nya adalah ```cp [namafile] [namacopyannya]```  
 ![cp](img/cp.png)
 
 ##### 7. mv
 *Move* Digunakan untuk memindahkan suatu file ke directory lain.
-+ Untuk memindahkan file, syntax-nya adalah ```mv [namafile] [pathbarunya]```
++ Untuk memindahkan file, syntax-nya adalah ```mv [namafile] [pathbarunya]```  
 ![mv](img/mv.png)
-+ Selain itu `mv` dapat juga digunakan untuk me-rename file, syntax-nya adalah ```mv [namafile] [namabaru]```
++ Selain itu `mv` dapat juga digunakan untuk me-rename file, syntax-nya adalah ```mv [namafile] [namabaru]```  
 ![mv](img/mv2.png)
 
 ##### 8. cat
-*concatenate*. Digunakan untuk menampilkan isi dari suatu file.
+*concatenate*. Digunakan untuk menampilkan isi dari suatu file.  
 ![cat](img/cat.png)
 
 ##### 9. rm
-*remove*. Digunakan untuk menghapus suatu file. Syntax-nya adalah ```rm [namafile]```
+*remove*. Digunakan untuk menghapus suatu file. Syntax-nya adalah ```rm [namafile]```  
 ![rm](img/rm.png)  
-Selain itu rm juga dapat digunakan untuk menghapus directory, yaitu dengan menambahkan parameter `-r`
+Selain itu rm juga dapat digunakan untuk menghapus directory, yaitu dengan menambahkan parameter `-r`  
 ![rm -r](img/rm_r.png)
 
 ##### 10. rmdir
-*remove directory*. Digunakan untuk menghapus directory yang kosong. Syntax-nya adalah ```rmdir [namafolder]```
+*remove directory*. Digunakan untuk menghapus directory yang kosong. Syntax-nya adalah ```rmdir [namafolder]```  
 ![rmdir](img/rmdir.png)
 
 ##### 11. echo
-Digunakan untuk menampilkan string yang kita inputkan. Syntax-nya adalah ```echo [string yang diinginkan]```
+Digunakan untuk menampilkan string yang kita inputkan. Syntax-nya adalah ```echo [string yang diinginkan]```  
 ![echo](img/echo.png)
 
 ##### 12. grep
 Digunakan untuk menampilkan setiap baris pada suatu file yang mengandung kata yang dicari.
-Syntax-nya adalah `grep "[katayangdicari]" [namafile]`
+Syntax-nya adalah `grep "[katayangdicari]" [namafile]`  
 ![grep](img/grep.png)
 
 ##### 13. zip
 Command ini digunakan untuk melakukan compress data menjadi bentuk zip. Syntax-nya adalah ```zip [namafilezip] [file1] [file2]```.
 Misalnya kita ingin mengompress file **makanan** dan **cemilan** menjadi  **energi.zip** .
-Maka command yang kita jalankan adalah `zip energi makanan cemilan`
+Maka command yang kita jalankan adalah `zip energi makanan cemilan`   
 ![zip](img/zip.png)
 
 ##### 14. unzip
@@ -351,12 +359,12 @@ Untuk menggunakan command ini, user harus meng-*install*-nya terlebih dahulu den
 
 ##### 18. mount
 Digunakan untuk melakukan mount. Syntax-nya adalah `sudo mount [file/device yang mau di-mount] [directory tempat dia akan di-mount]`
-Contoh: ada suatu file _iso_ yang berisi beberapa file. Untuk dapat mengakses file-file di dalamnya melalui terminal, maka kita harus _mount_ file tersebut ke suatu directory.
+Contoh: ada suatu file _iso_ yang berisi beberapa file. Untuk dapat mengakses file-file di dalamnya melalui terminal, maka kita harus _mount_ file tersebut ke suatu directory.  
 ![mount](img/mount.JPG)  
 
 ##### 19. umount
 Digunakan untuk melakukan _unmount_. Syntax-nya adalah `umount [directory tempat suatu file/device di-mount]`.
-Nama command-nya `umount` yaa bukan _unmount_.
+Nama command-nya `umount` yaa bukan _unmount_.  
 ![unmount](img/umount.JPG)  
 
 ##### 20. dpkg
@@ -365,14 +373,14 @@ Syntax-nya adalah `dpkg -i [path ke file installer aplikasi]`
 Contohnya adalah saat kalian ingin meng-install _google chrome_ maka kalian dapat menggunakan perintah-perintah di bawah ini:
 pertama download dulu installer google chrome yang berekstensi __.deb__
 ```sh
-$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-```
+$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  
+```  
 ![wget](img/wget.JPG)  
 
 lalu untuk meng-installnya gunakan command
 ```sh
 $ dpkg -i google-chrome-stable_current_amd64.deb
-```
+```  
 ![dpkg](img/dpkg2.jpg)  
 
 ### 2. Administrative Command
@@ -387,7 +395,7 @@ Syntax-nya adalah `sudo [command]`
 ###### 3. chown
 *change owner*.
 + Digunakan untuk mengubah kepemilikan dari suatu file. Syntax-nya adalah 
-```chown [namauser] [namafile]```
+```chown [namauser] [namafile]```  
 ![chown](img/chown.png)  
 + Selain user pemilik, command `chown` juga bisa digunakan untuk mengganti *group* pemilik. Syntax-nya adalah
 ```chown [namauser]:[namagroup] [namafile]```
@@ -401,7 +409,7 @@ Digunakan untuk meng-*update* password user.
 ##### 5. chmod
 *change mode*. Digunakan untuk mengubah izin akses dari suatu dokumen.
 Contoh syntax `chmod 777 [namafile]`
-*777* adalah representasi dari permission yang diberikan. Angka pertama melambangkan permission untuk user, angka kedua untuk group, dan angka ke tiga untuk *Others*
+*777* adalah representasi dari permission yang diberikan. Angka pertama melambangkan permission untuk user, angka kedua untuk group, dan angka ke tiga untuk *Others*  
 ![chmod](img/chmod.png)  
 
 Permission Table
@@ -482,7 +490,7 @@ Misal kita akan membuat file txt dengan nama *cobagedit* maka ketikkan pada term
 ```sh
 $ gedit cobagedit.txt
 ```
-Halaman gedit pun akan muncul dan kita bisa menginputkan teks yang kita inginkan.
+Halaman gedit pun akan muncul dan kita bisa menginputkan teks yang kita inginkan.  
 ![gedit1](img/gdit1.png)
 
 File gedit memungkinkan kita untuk mengedit banyak file sekaligus. Syntax yang digunakan 
@@ -492,7 +500,7 @@ $ gedit [file1 file2 ...]
 misalnya mengedit 2 file yaitu *cobagedit.txt* dan *nyobajuga.txt*
 ```sh
 $ gedit cobagedit.txt nyobajuga.txt
-```
+```  
 ![gedit2](img/gdit2.png)
 
 ##### 3. nano
@@ -500,10 +508,10 @@ Nano atau *Nano's ANOther editor* merupakan teks editor yang dikembangkan mirip 
 Syntax yang biasa digunakan 
 ```sh
 $ nano [nama-file]
-```
+```  
 ![nano1](img/nanoo.png)
 
-Command tersebut akan memunculkan default nano-screen
+Command tersebut akan memunculkan default nano-screen  
 
 ![nano2](img/nano2.png)
 
@@ -513,14 +521,14 @@ Untuk melihat list dari shortcut-shortcut yang ada tekan `Ctrl+G`
 
 Ketika `Ctrl+X` ditekan untuk keluar dari editor, pada bagian bawah di baris ketiga dari bawah akan muncul pertanyaan *Save modified buffer?* Tekan `Y` untuk menyimpan perubahan dari file, dan `N` untuk keluar dari teks editor nano tanpa menyimpan perubahan. 
 
-Selain itu sebelum benar-benar keluar dari teks editor nano, kita juga dapat merubah nama file yang baru saja kita buat tadi. Cukup dengan mengganti nama file sebelumnya yang tertera pada bagian bawah teks editor dimana terdapat tulisan *File name to write: ...* lalu tekan Enter.  
+Selain itu sebelum benar-benar keluar dari teks editor nano, kita juga dapat merubah nama file yang baru saja kita buat tadi. Cukup dengan mengganti nama file sebelumnya yang tertera pada bagian bawah teks editor dimana terdapat tulisan *File name to write: ...* lalu tekan Enter.   
 ![nano4](img/nano4.png)
 
 ##### 4. touch
 Digunakan untuk membuat sebuah file. Syntax yang digunakan 
 ```sh
 $ touch [nama-file]
-```
+```  
 ![touch1](img/touch1.png)
 
 ### 4. Export Variable
@@ -624,6 +632,7 @@ sub-materi
 - [3. Setting IP Address Statis](#3-Setting-IP-Address-Statis)
   - [a. GUI](#a-GUI)
   - [b. CLI](#b-CLI)
+- [4. Crimping](#wire-crimping)
 
 ### 1. VirtualBox Networking Modes
 
@@ -701,7 +710,7 @@ $ sudo service networking restart
 
 <div style="page-break-after: always;"></div>
 
-## 1. WIRE CRIMPING
+## WIRE CRIMPING
 Dalam membangun jaringan komputer, tentunya dibutuhkan segala hal yang dapat menghubungkan perangkat-perangkat komputer yang ada. Hingga saat ini, komponen paling fundamental dalam jaringan komputer adalah kabel. Sekalipun teknologi nirkabel sudah lama ditemukan dan dikembangkan, tapi peran kabel jaringan tetap belum bisa tergantikan. Oleh karena itu di sini kita akan belajar bagaimana membuat kabel jaringan (dalam hal ini kabel UTP) menjadi fungsional.
 
 __1. *Kebutuhan*__
