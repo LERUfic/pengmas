@@ -940,7 +940,7 @@ The key's randomart image is:
 Salin puclic key dengan menggunakan command `ssh-copy-id`:
 
 ```shell
-ssh-copy-id rohana@10.151.253.14
+$ ssh-copy-id rohana@10.151.253.14
 ```
 
 Jangan lupa mengganti username dan IP pada contoh. Sekarang coba untuk login ke user yang sudah memiliki public key kita, kita tidak akan dimintai password. Namun, jika kita sebelumnya memasukkan passphrase maka kita akan diminta memasukkan passphrase tersebut.
