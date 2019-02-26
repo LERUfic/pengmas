@@ -4,7 +4,7 @@
 4. [Konsep](#konsep)
 3. [CLI](#command-line-interface)
 5. [Networking](#networking)
-6. [Penggunaan Aplikasi]
+6. [Penggunaan Aplikasi](#penggunaan-aplikasi)
 
 # Pengenalan
 Sub-materi
@@ -763,3 +763,185 @@ __3. *Cara Crimping*__
 - Lakukan hal serupa pada kedua ujung kabel.
 
 - Menguji menggunakan LAN tester, jika semua lampu menyala, berarti kabel tersebut telah di crimping dengan benar dan bisa digunakan.
+
+# Penggunaan Aplikasi
+
+### Instalasi LAMP Stack pada Ubuntu
+Sub-Materi
+1. [Instalasi Apache](#1-instalasi-apache)
+2. [Instalasi MySQL](#2-instalasi-mysql)
+3. [Instalasi PHP](#3-instalasi-php)
+4. [Penggunaan](#4-penggunaan)
+5. [Setup SSH Keys](#5-setup-ssh-keys)
+
+##### 1. Instalasi Apache
+Untuk melakukan instalasi, ketikkan command berikut:
+
+```shell
+$ sudo apt-get update
+$ sudo apt-get install apache2
+```
+
+##### 2. Instalasi MySQL
+Untuk melakukan instalasi, ketikkan command berikut:
+
+```shell
+$ sudo apt-get install mysql-server
+```
+
+Selama proses instalasi, pengguna akan diminta memasukkan password untuk MySQL root user.
+
+##### 3. Instalasi PHP
+Untuk melakukan instalasi, ketikkan command berikut:
+```shell
+$ sudo apt-get install php
+```
+
+##### 4. Penggunaan
+__Apache__
+Untuk melihat apakah server apache sudah berjalan, ketikkan command berikut
+
+```shell
+$ sudo service apache2 status
+```
+
+Jika sudah berjalan, output yang seharusnya adalah sebagai berikut:
+![apache-status](img/apache-status.png) <br>
+
+```shell
+$ sudo service apache2 restart
+$ sudo service apache2 start
+$ sudo service apache2 stop
+```
+
+Command pertama berguna untuk merestart server, command kedua berguna untuk menyalakan server, dan command ketiga berguna untuk mematikan server.
+<br>
+Secara default root folder dari Apache berada di ___/var/www/html___. Apache memiliki folder untuk konfigurasi yang berada di ___/etc/apache___. Perlu untuk diketahui:
+Nama File | Pengertian
+------------ | -------------
+**apache2.conf** | file konfigurasi utama apache2.
+**ports.conf** | file konfigurasi port yang digunakan untuk webserver.
+**sites-available** | folder tempat konfigurasi website (virtual host) yang tersedia.
+**sites-enabled** | folder tempat konfigurasi website (virtual host) yang tersedia dan sudah aktif.
+**mods-available** | folder tempat modul-modul apache2 yang tersedia.
+**mods-enabled** | folder tempat modul-modul apache2 yang tersedia dan sudah aktif.
+
+* ***Tentang Command***
+
+Command | Arti
+------------ | -------------
+a2ensite | Untuk memasukkan atau ENABLE config yang telah dibuat
+a2dissite | Untuk menonaktifkan atau DISABLE config yang telah dibuat
+a2enmod | Untuk ENABLE spesifik modul ke dalam konfigurasi apache2
+a2dismod | Untuk DISABLE spesifik modul ke dalam konfigurasi apache2
+
+__MySQL__
+Untuk melihat apakah MySQL sudah berjalan, ketikkan command berikut
+
+```shell
+$ sudo service mysql status
+```
+
+Jika sudah berjalan, output yang seharusnya adalah sebagai berikut:
+![mysql-status](img/mysql-status.png)<br>
+
+```shell
+$ sudo service mysql restart
+$ sudo service mysql start
+$ sudo service mysql stop
+```
+
+Command pertama berguna untuk merestart MySQL, command kedua berguna untuk menyalakan MySQL, dan command ketiga berguna untuk mematikan MySQL.
+
+Untuk masuk ke MySQL command prompt, ketikkan command berikut:
+
+```shell
+$ sudo mysql -u root -p
+```
+
+Command di atas berarti kita akan masuk ke MySQL command prompt sebagai root user. Untuk masuk dengan user yang lain, ubah root dengan username yang sesuai. Pengguna akan diminta memasukkan password sesuai usernamenya. 
+<br>
+Setelah masuk ke MySQL Command Prompt maka tampilannya adalah sebagai berikut:
+![mysql-rohana](img/mysql-rohana.png)<br>
+Pada contoh di atas maka pengguna masuk sebagai rohana. Untuk keluar dari command prompt, ketikkan `exit`.
+
+__PHP__
+Untuk memastikan PHP sudah terinstal, buat file berekstensi php pada root folder apache.
+
+```shell
+$ sudo touch /var/www/html/index.php
+```
+
+Buka file yang sudah dibuat dengan menggunakan text editor:
+```shell
+$ sudo nano /var/www/html/index.php
+```
+
+Kemudian masukkan baris kode berikut:
+```php
+<?php
+   phpinfo();
+?>
+```
+
+Untuk melihat hasilnya, buka browser dan akses __localhost/index.php__.
+![php-info](img/php-info.png)<br>
+
+##### 5. Setup SSH Keys
+Secure Shell (lebih dikenal sebagai SSH) memungkinkan pengguna untuk melakukan layanan jaringan secara aman pada jaringan yang tidak aman. SSH Keys menyediakan keamanan lebih dibandingkan hanya dengan menggunakan password. Password dapat dipecahkan melalui brute force sedangkan SSH Keys hampir tidak mungkin dipecahkan hanya dengan brute force saja.
+
+__5.1 Create the RSA Key Pair__
+```shell
+$ ssh-keygen -t rsa
+```
+
+__5.2 Store the Keys and Passphrase__
+
+```shell
+Enter file in which to save the key (/home/rohana/.ssh/id_rsa):
+```
+
+Tekan enter untuk menyimpan pada home folder pengguna (pada contoh, pengguna di sini adalah rohana)
+
+```shell
+Enter passphrase (empty for no passphrase):
+```
+Di sini kita bisa memilih untuk menggunakan passphrase atau tidak. Dengan menggunakan passphrase tentunya lebih aman namun kita harus memasukkan passphrase kita tiap ingin menggunakan key pair.
+
+Output dari keseluruhan proses:
+```
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/rohana/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/rohana/.ssh/id_rsa.
+Your public key has been saved in /home/rohana/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:1gT2KTvnPefNIUtUc4z2cTA3hDYgusBvkycazQILA4g rohana@ABIMANYU
+The key's randomart image is:
++---[RSA 2048]----+
+|+       o. .. =o.|
+|E   .  ..o.. + *.|
+| o . o .. + . +++|
+|  o o = o=   ...=|
+|   . o XS.o  .  .|
+|      =.++ ..    |
+|     .    . oo.. |
+|            .+oo.|
+|             .. o|
++----[SHA256]-----+
+
+```
+
+__5.3 Copy the Public Key__
+Salin puclic key dengan menggunakan command `ssh-copy-id`:
+
+```shell
+ssh-copy-id rohana@10.151.253.14
+```
+
+Jangan lupa mengganti username dan IP pada contoh. Sekarang coba untuk login ke user yang sudah memiliki public key kita, kita tidak akan dimintai password. Namun, jika kita sebelumnya memasukkan passphrase maka kita akan diminta memasukkan passphrase tersebut.
+
+__Referensi__
++ https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
++ https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
