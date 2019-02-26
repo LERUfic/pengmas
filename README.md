@@ -5,6 +5,7 @@
 3. [CLI](#command-line-interface)
 5. [Networking](#networking)
 6. [Penggunaan Aplikasi](#penggunaan-aplikasi)
+7. [Setup SSH Keys](#setup-ssh-keys)
 
 # Pengenalan
 Sub-materi
@@ -772,9 +773,8 @@ Sub-Materi
 2. [Instalasi MySQL](#2-instalasi-mysql)
 3. [Instalasi PHP](#3-instalasi-php)
 4. [Penggunaan](#4-penggunaan)
-5. [Setup SSH Keys](#5-setup-ssh-keys)
 
-##### 1. Instalasi Apache
+#### 1. Instalasi Apache
 Untuk melakukan instalasi, ketikkan command berikut:
 
 ```shell
@@ -782,7 +782,7 @@ $ sudo apt-get update
 $ sudo apt-get install apache2
 ```
 
-##### 2. Instalasi MySQL
+#### 2. Instalasi MySQL
 Untuk melakukan instalasi, ketikkan command berikut:
 
 ```shell
@@ -791,13 +791,13 @@ $ sudo apt-get install mysql-server
 
 Selama proses instalasi, pengguna akan diminta memasukkan password untuk MySQL root user.
 
-##### 3. Instalasi PHP
+#### 3. Instalasi PHP
 Untuk melakukan instalasi, ketikkan command berikut:
 ```shell
 $ sudo apt-get install php
 ```
 
-##### 4. Penggunaan
+#### 4. Penggunaan
 __Apache__<br>
 Untuk melihat apakah server apache sudah berjalan, ketikkan command berikut
 
@@ -887,15 +887,18 @@ Kemudian masukkan baris kode berikut:
 Untuk melihat hasilnya, buka browser dan akses __localhost/index.php__.
 ![php-info](img/php-info.png)<br>
 
-##### 5. Setup SSH Keys
+__Referensi__<br>
++ https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
+
+### Setup SSH Keys
 Secure Shell (lebih dikenal sebagai SSH) memungkinkan pengguna untuk melakukan layanan jaringan secara aman pada jaringan yang tidak aman. SSH Keys menyediakan keamanan lebih dibandingkan hanya dengan menggunakan password. Password dapat dipecahkan melalui brute force sedangkan SSH Keys hampir tidak mungkin dipecahkan hanya dengan brute force saja.
 
-__5.1 Create the RSA Key Pair__
+#### Create the RSA Key Pair
 ```shell
 $ ssh-keygen -t rsa
 ```
 
-__5.2 Store the Keys and Passphrase__
+#### Store the Keys and Passphrase
 
 ```shell
 Enter file in which to save the key (/home/rohana/.ssh/id_rsa):
@@ -933,7 +936,7 @@ The key's randomart image is:
 
 ```
 
-__5.3 Copy the Public Key__
+#### Copy the Public Key
 Salin puclic key dengan menggunakan command `ssh-copy-id`:
 
 ```shell
@@ -943,5 +946,4 @@ ssh-copy-id rohana@10.151.253.14
 Jangan lupa mengganti username dan IP pada contoh. Sekarang coba untuk login ke user yang sudah memiliki public key kita, kita tidak akan dimintai password. Namun, jika kita sebelumnya memasukkan passphrase maka kita akan diminta memasukkan passphrase tersebut.
 
 __Referensi__<br>
-+ https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
 + https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
