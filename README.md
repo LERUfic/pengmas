@@ -798,7 +798,7 @@ $ sudo apt-get install php
 ```
 
 ##### 4. Penggunaan
-__Apache__
+__Apache__<br>
 Untuk melihat apakah server apache sudah berjalan, ketikkan command berikut
 
 ```shell
@@ -835,7 +835,7 @@ a2dissite | Untuk menonaktifkan atau DISABLE config yang telah dibuat
 a2enmod | Untuk ENABLE spesifik modul ke dalam konfigurasi apache2
 a2dismod | Untuk DISABLE spesifik modul ke dalam konfigurasi apache2
 
-__MySQL__
+__MySQL__<br>
 Untuk melihat apakah MySQL sudah berjalan, ketikkan command berikut
 
 ```shell
@@ -865,7 +865,7 @@ Setelah masuk ke MySQL Command Prompt maka tampilannya adalah sebagai berikut:
 ![mysql-rohana](img/mysql-rohana.png)<br>
 Pada contoh di atas maka pengguna masuk sebagai rohana. Untuk keluar dari command prompt, ketikkan `exit`.
 
-__PHP__
+__PHP__<br>
 Untuk memastikan PHP sudah terinstal, buat file berekstensi php pada root folder apache.
 
 ```shell
@@ -942,6 +942,6 @@ ssh-copy-id rohana@10.151.253.14
 
 Jangan lupa mengganti username dan IP pada contoh. Sekarang coba untuk login ke user yang sudah memiliki public key kita, kita tidak akan dimintai password. Namun, jika kita sebelumnya memasukkan passphrase maka kita akan diminta memasukkan passphrase tersebut.
 
-__Referensi__
+__Referensi__<br>
 + https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
 + https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
