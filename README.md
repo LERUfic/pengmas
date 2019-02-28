@@ -810,30 +810,34 @@ Jika sudah berjalan, output yang seharusnya adalah sebagai berikut:
 
 ```shell
 $ sudo service apache2 restart
-$ sudo service apache2 start
 $ sudo service apache2 stop
+$ sudo service apache2 start
 ```
 
-Command pertama berguna untuk merestart server, command kedua berguna untuk menyalakan server, dan command ketiga berguna untuk mematikan server.
-<br>
+| Command | Kegunaan |
+| ----- | ----- |
+| restart | Digunakan untuk merestart servis apache. |
+| stop | Digunakan untuk mematikan servis apache. |
+| start | Digunakan untuk menyalakan servis apache. |
+
 Secara default root folder dari Apache berada di ___/var/www/html___. Apache memiliki folder untuk konfigurasi yang berada di ___/etc/apache___. Perlu untuk diketahui:
-Nama File | Pengertian
------------- | -------------
-**apache2.conf** | file konfigurasi utama apache2.
-**ports.conf** | file konfigurasi port yang digunakan untuk webserver.
-**sites-available** | folder tempat konfigurasi website (virtual host) yang tersedia.
-**sites-enabled** | folder tempat konfigurasi website (virtual host) yang tersedia dan sudah aktif.
-**mods-available** | folder tempat modul-modul apache2 yang tersedia.
-**mods-enabled** | folder tempat modul-modul apache2 yang tersedia dan sudah aktif.
+| Nama File | Pengertian |
+| --------- | ---------- |
+| **apache2.conf** | file konfigurasi utama apache2. |
+| **ports.conf** | file konfigurasi port yang digunakan untuk webserver. |
+| **sites-available** | folder tempat konfigurasi website (virtual host) yang tersedia. |
+| **sites-enabled** | folder tempat konfigurasi website (virtual host) yang tersedia dan sudah aktif. |
+| **mods-available** | folder tempat modul-modul apache2 yang tersedia. |
+| **mods-enabled** | folder tempat modul-modul apache2 yang tersedia dan sudah aktif. |
 
 * ***Tentang Command***
 
-Command | Arti
------------- | -------------
-a2ensite | Untuk memasukkan atau ENABLE config yang telah dibuat
-a2dissite | Untuk menonaktifkan atau DISABLE config yang telah dibuat
-a2enmod | Untuk ENABLE spesifik modul ke dalam konfigurasi apache2
-a2dismod | Untuk DISABLE spesifik modul ke dalam konfigurasi apache2
+| Command | Arti |
+| ------- | ------- | 
+| a2ensite | Untuk memasukkan atau ENABLE config yang telah dibuat |
+| a2dissite | Untuk menonaktifkan atau DISABLE config yang telah dibuat |
+| a2enmod | Untuk ENABLE spesifik modul ke dalam konfigurasi apache2 |
+| a2dismod | Untuk DISABLE spesifik modul ke dalam konfigurasi apache2 |
 
 __MySQL__<br>
 Untuk melihat apakah MySQL sudah berjalan, ketikkan command berikut
@@ -847,11 +851,15 @@ Jika sudah berjalan, output yang seharusnya adalah sebagai berikut:
 
 ```shell
 $ sudo service mysql restart
-$ sudo service mysql start
 $ sudo service mysql stop
+$ sudo service mysql start
 ```
 
-Command pertama berguna untuk merestart MySQL, command kedua berguna untuk menyalakan MySQL, dan command ketiga berguna untuk mematikan MySQL.
+| Command | Kegunaan |
+| ----- | ----- |
+| restart | Digunakan untuk merestart servis MySQL. |
+| stop | Digunakan untuk mematikan servis MySQL. |
+| start | Digunakan untuk menyalakan servis MySQL. |
 
 Untuk masuk ke MySQL command prompt, ketikkan command berikut:
 
@@ -940,10 +948,33 @@ The key's randomart image is:
 Salin puclic key dengan menggunakan command `ssh-copy-id`:
 
 ```shell
-$ ssh-copy-id rohana@10.151.253.14
+$ ssh-copy-id rohana@10.151.253.118
 ```
 
 Jangan lupa mengganti username dan IP pada contoh. Sekarang coba untuk login ke user yang sudah memiliki public key kita, kita tidak akan dimintai password. Namun, jika kita sebelumnya memasukkan passphrase maka kita akan diminta memasukkan passphrase tersebut.
+
+#### Cara Melakukan Koneksi dengan Menggunakan SSH
+Pada terminal, ketikkan command berikut:
+
+```shell
+$ ssh rohana@10.151.253.118
+```
+
+Keterangan:
+| Command | Keterangan |
+| ----- | ----- |
+| ssh | Command yang digunakan untuk melakukan koneksi remote |
+| rohana | Username yang akan diremote |
+| 10.151.253.118 | Alamat IP dari perangkat yang akan diremote |
+
+__Koneksi tanpa SSH Key__
+![ssh-without-key](img/ssh-wo-key.png)<br>
+Tanpa menggunakan SSH Key, kita akan diminta untuk memasukkan password.
+
+__Koneksi dengan SSH Key__
+![ssh-with-key1](img/ssh-w-key1.png)<br>
+![ssh-with-key2](img/ssh-w-key2.png)<br>
+Dengan menggunakan SSH Key, kita tidak diminta untuk memasukkan password dari perangkat yang akan diremote. Namun, karena sebelumnya kita menggunakan passphrase maka passphrase tersebut lah yang harus kita masukkan.
 
 __Referensi__<br>
 + https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
