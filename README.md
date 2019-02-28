@@ -821,6 +821,7 @@ $ sudo service apache2 start
 | start | Digunakan untuk menyalakan servis apache. |
 
 Secara default root folder dari Apache berada di ___/var/www/html___. Apache memiliki folder untuk konfigurasi yang berada di ___/etc/apache___. Perlu untuk diketahui:
+
 | Nama File | Pengertian |
 | --------- | ---------- |
 | **apache2.conf** | file konfigurasi utama apache2. |
@@ -855,11 +856,13 @@ $ sudo service mysql stop
 $ sudo service mysql start
 ```
 
+
 | Command | Kegunaan |
 | ----- | ----- |
 | restart | Digunakan untuk merestart servis MySQL. |
 | stop | Digunakan untuk mematikan servis MySQL. |
 | start | Digunakan untuk menyalakan servis MySQL. |
+
 
 Untuk masuk ke MySQL command prompt, ketikkan command berikut:
 
@@ -960,12 +963,14 @@ Pada terminal, ketikkan command berikut:
 $ ssh rohana@10.151.253.118
 ```
 
+
 Keterangan:
 | Command | Keterangan |
 | ----- | ----- |
 | ssh | Command yang digunakan untuk melakukan koneksi remote |
 | rohana | Username yang akan diremote |
 | 10.151.253.118 | Alamat IP dari perangkat yang akan diremote |
+
 
 __Koneksi tanpa SSH Key__
 ![ssh-without-key](img/ssh-wo-key.png)<br>
