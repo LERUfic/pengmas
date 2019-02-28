@@ -963,14 +963,11 @@ Pada terminal, ketikkan command berikut:
 $ ssh rohana@10.151.253.118
 ```
 
-
-Keterangan:
 | Command | Keterangan |
 | ----- | ----- |
 | ssh | Command yang digunakan untuk melakukan koneksi remote |
 | rohana | Username yang akan diremote |
 | 10.151.253.118 | Alamat IP dari perangkat yang akan diremote |
-
 
 __Koneksi tanpa SSH Key__
 ![ssh-without-key](img/ssh-wo-key.png)<br>
