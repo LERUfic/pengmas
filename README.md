@@ -19,40 +19,55 @@ Sub-materi
 ### 2. Distro Linux
 **Distro Linux** (singkatan dari **distribusi Linux**) adalah sebutan untuk sistem operasi komputer dan aplikasinya, merupakan keluarga yang menggunakan kernel Linux.
 
-**1. Red Hat**  
+**1. Red Hat**
+
 ![Red Hat](img/RedHat-150x150.png  "Red Hat")  
+
 Red Hat ini merupakan salah satu Distro Linux yang dikembangkan oleh salah satu perusahaan bernama Red Hat Inc dan seringkali juga disebut Red Hat Linux namun pada tahun 2003 diganti menjadi Red Hat Enterprise Linux khusus untuk lingkungan perusahaan. Sistem operasi yang satu ini juga yang pertama kali mempopulerkan penggunaan sistem _RPM Package Manager_.
 
-**2. CentOS**  
+**2. CentOS**
+
 ![CentOS](img/centos-150x150.jpg  "CentOS")  
 CentOS merupakan singkatan dari _Community Enterprise Operating System_dan merupakan salah satu contoh Distro Linux yang dikembangkan oleh The CentOS Project. Sistem operasi ini dibuat menggunakan kode sumber yang berasal dari Red Hat. Oleh karena itu, dalam hal produk CentOs ini sangatlah mirip dengan Red Hat Enterprise Linux.
 
 **3. Fedora**  
+
 ![Fedora](img/fedora-150x150.png  "Fedora")  
 Fedora ini merupakan salah satu Distro Linux yang dkembangkan karena disponsori dan didukung oleh Red Hat namun dibuat oleh tim khusus bernama Fedora Project. Bahkan nama Fedora ini diambil dari salah satu karakter dalam logo Red Hat itu sendiri. Sama halnya dengan Red Hat, sistem operasi Fedora juga menggunakan sistem _RPM Package Manager_.
 
 **4. openSUSE**  
+
 ![openSUSE](img/openSUSE-150x150.png  "openSUSE")  
+
 openSUSE ini juga termasuk salah satu sistem operasi yang didirikan diatas kernel Linux atau biasa disebut Distro Linux. openSUSE Project selaku pihak pengembang menciptakan sistem operasi ini dengan tujuan agar penggunaan Linux dapat lebih maju dengan kinerjanya yang stabil dan ramah pengguna. openSUSE ini lebih sering digunakan sebagai sistem operasi desktop/ server.
 
 **5. Mandrake (Mandriva)**  
+
 ![Mandrake](img/mandriva-150x150.jpg  "Mandrake")  
+
 Sistem operasi Mandrake atau yang juga bisa disebut Mandriva Linux merupakan salah satu jenis Distro Linux yang kali ini dikembangkan oleh suatu perusahaan bernama Mandriva. Sama halnya dengan Fedora, sistem operasi Mandrake ini juga menggunakan sistem _RPM Package Manager_.
 
 **6. Debian**  
+
 ![Debian](img/2000px-Ardebian_logo.svg-150x150.png  "Debian")  
+
 Proses penamaan dari salah satu Distro Linux ini bisa dibilang cukup unik. Sang pencetus pertama kali yakni Ian Murdock memberi nama Debian karena merupakan kombinasi dari namanya dan mantan kekasihnya. Salah satu alasan mengapa Debian ini termasuk Distro Linux yang paling banyak digunakan adalah karena security-nya yang bagus .
 
 **7. Ubuntu**  
+
 ![Ubuntu](img/ubuntu-150x150.png  "Ubuntu")  
 Ubuntu merupakan suatu sistem operasi yang berbasiskan pada Debian dan dikembangkan oleh suatu perusahaan dari Afrika Selatan yang bernama _Canonical ltd_. Asal penamaan dari Ubuntu ini juga berasal dari bahasa Afrika Selatan yang berarti kemanusiaan. Dengan sifatnya sebagai OS open source, Ubuntu sengaja diprioritaskan untuk kepentingan umum atau server.
 
 **8. Mint**  
+
 ![Mint](img/mint-150x150.png  "Mint")  
+
 Jika sebelumnya anda mengetahui bahwa Distro Linux yang bernama Ubuntu dibuat dengan berbasiskan pada Debian, maka kali ini ada Distro Linux yang berbasiskan pada Debian dan Ubuntu. Namanya adalah Mint atau yang biasa disebut Linux Mint.
 
 **9. Zorin**  
+
 ![Zorin](img/zorin-150x150.jpg  "Zorin")  
+
 Zorin ini merupakan salah satu Distro Linux yang memiliki tampilan grafis sangat mirip dengan Windows, bahkan termasuk pada aplikasi – aplikasinya. Sejak awal tujuan pembuatan sistem operasi ini memang agar para pengguna yang terbiasa dengan Windows dapat menikmati fitur dari Linux tanpa harus mengalami kesulitan.
 
 ### 3. Perbedaan Linux, MAC, dan Windows
@@ -110,16 +125,16 @@ Berikut ini perbandingan termasuk kelebihan dan kekurangan dari kedua teknik ins
 
 ### 3. Membuat Virtual Machine
 1. Install Oracle VM VirtualBox. Jika sudah ada, lanjut ke langkah 2.
-2. Buka aplikasi Oracle VM VirtualBox di Windows kamu.  
+2. Buka aplikasi Oracle VM VirtualBox di Windows Anda.  
 ![Tampilan awal Oracle VM VirtualBox](img/vb_home.png "Tampilan awal Oracle VM VirtualBox")
 
-3. Klik **New** untuk membuat Virtual Machine baru. Isi **name** dengan nama 'Ubunru 16.04', **type** pilih Linux, dan pilih **version** sesuai sepesifikasi PC atau Laptop kamu. Kemudian klik **Next** untuk proses selanjutnya.  
+3. Klik **New** untuk membuat Virtual Machine baru. Isi **name** dengan nama 'Ubuntu 16.04', **type** pilih Linux, dan pilih **version** sesuai sepesifikasi PC atau Laptop Anda. Kemudian klik **Next** untuk proses selanjutnya.  
 ![Membuat Virtual Machine baru Oracle VM VirtualBox](img/vb_buat_vm_baru.png "Membuat Virtual Machine baru Oracle VM VirtualBox")
 
-4. Selanjutnya kamu disuruh untuk menentukan besaran memori, namun VirtualBox otomatis merekomendasikan besarnya memori. Jika sudah sesuai klik **Next**.  
+4. Selanjutnya Anda disuruh untuk menentukan besaran memori, namun VirtualBox otomatis merekomendasikan besarnya memori. Jika sudah sesuai klik **Next**.  
 ![Set memori VM baru Oracle VM VirtualBox](img/vb_set_memori.png "Set memori VM baru Oracle VM VirtualBox")
 
-5. Selanjutnya kamu disuruh untuk menentukan ukuran harddisk, namun VirtualBox otomatis merekomendasikan ukuran harddisk. Jika sudah sesuai klik **Next**.  
+5. Selanjutnya Anda disuruh untuk menentukan ukuran harddisk, namun VirtualBox otomatis merekomendasikan ukuran harddisk. Jika sudah sesuai klik **Next**.  
 ![Set ukuran harddisk VM baru Oracle VM VirtualBox](img/vb_set_disk.png "Set ukuran harddisk VM baru Oracle VM VirtualBox")
 
 6. Klik **Next** saja pada proses ini untuk menuju proses selanjutnya.  
@@ -131,16 +146,16 @@ Berikut ini perbandingan termasuk kelebihan dan kekurangan dari kedua teknik ins
 8. Menentukan ukuran harddisk(direkomendasikan minimal 10GB). Klik **Create**.  
 ![Set ukuran harddisk VM baru Oracle VM VirtualBox(3)](img/vb_set_disk_size.png "Set ukuran harddisk VM baru Oracle VM VirtualBox(3)")
 
-9. Yee, virtual machine yang kamu buat sudah jadi! Namun, kamu masih harus menginstall Ubuntu 16.04 pada virtual machine yang telah kamu buat.
+9. Virtual machine yang Anda buat sudah jadi! Namun, Anda masih harus menginstall Ubuntu 16.04 pada virtual machine yang telah Anda buat.
 
 ### 4. Instalasi Ubuntu 16.04
 Setelah berhasil membuat virtual machine, selanjutnya kita menginstall Ubuntu 16.04 pada virtual machine yang telah dibuat.
-1. Pilih virtual machine yang ingin di install, lalu klik **Setting** -> **Storage** -> **Controller: IDE** -> **Empty** -> **Choose Virtual Optical Disk File** untuk memilih file ISO Ubuntu yang akan di install. Kemudian klik **Start**(tanda panah hijau)  
+1. Pilih virtual machine yang ingin di install, lalu klik **Setting** -> **Storage** -> **Controller: IDE** -> **Empty** -> **Choose Virtual Optical Disk File** untuk memilih file ISO Ubuntu yang akan di install. Kemudian klik **Start** (tanda panah hijau).
 ![Set file ISO Ubuntu VM baru Oracle VM VirtualBox](img/vb_set_iso.png "Set file ISO Ubuntu VM baru Oracle VM VirtualBox")  
 ![Set file ISO Ubuntu VM baru Oracle VM VirtualBox(2)](img/vb_get_iso_file.png "Set file ISO Ubuntu VM baru Oracle VM VirtualBox(2)")  
 ![Set file ISO Ubuntu VM baru Oracle VM VirtualBox(3)](img/vb_vm_jadi.png "Set file ISO Ubuntu VM baru Oracle VM VirtualBox(3)")
 
-2. Yuhuu!! File ISO Ubuntu sudah berjalan. Selanjutnya tinggal ikuti langkah instalasinya. Klik **Install Ubuntu**.  
+2. File ISO Ubuntu sudah berjalan. Selanjutnya tinggal ikuti langkah instalasinya. Klik **Install Ubuntu**.  
 ![Instalasi Ubuntu(1)](img/vb_install_ubuntu1.png "Instalasi Ubuntu(1)")
 
 3. Tidak perlu mencentang apapun untuk menghemat waktu instalasi, kemudian klik **Continue**.  
@@ -182,6 +197,7 @@ Sub-Materi
 Jika kita ingin belajar Linux lebih mendalam, hal yang paling dasar untuk dipahami adalah struktur direktorinya. Struktur direktori pada Linux sangat berbeda dengan Windows. 
 #### 1.1 Struktur direktori Windows
 Sistem operasi Windows memiliki struktur direktori yang sederhana dan mudah dipahami, seperti dibawah ini:  
+
 ![Struktur direktori Windows](img/windows.jpg "Struktur direktori Windows")
 
 - **Program Files** : Berfungsi untuk menyimpan program-program dan aplikasi  yang terinstal di dalam Windows
