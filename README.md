@@ -379,7 +379,7 @@ Digunakan untuk melakukan mount. Syntax-nya adalah `sudo mount [file/device yang
 Contoh: ada suatu file _iso_ yang berisi beberapa file. Untuk dapat mengakses file-file di dalamnya melalui terminal, maka kita harus _mount_ file tersebut ke suatu directory.  
 ![mount](img/mount.JPG)  
 
-##### 19. umount
+##### 19. unmount
 Digunakan untuk melakukan _unmount_. Syntax-nya adalah `umount [directory tempat suatu file/device di-mount]`.
 Nama command-nya `umount` yaa bukan _unmount_.  
 ![unmount](img/umount.JPG)  
@@ -551,9 +551,9 @@ $ touch [nama-file]
 ### 4. Export Variable
 Command *export* adalah salah satu command yang merupakan bagian dari shell (BuiltIn bash shell). Command ini cukup mudah digunakan karena syntax nya 'langsung' dan hanya memiliki 3 opsi perintah:
 
-- -p : Daftar semua nama yang diekspor dalam shell saat ini
-- -n : Hapus nama dari daftar ekspor
-- -f : Nama diekspor sebagai fungsi
+- `-p` : Daftar semua nama yang diekspor dalam shell saat ini
+- `-n` : Hapus nama dari daftar ekspor
+- `-f` : Nama diekspor sebagai fungsi
 
 Secara umum, perintah ekspor menandai *environment variabel* untuk diekspor sehingga proses *child* yang baru bercabang dapat mewarisi semua variabel yang ditandai.
 
@@ -569,11 +569,13 @@ pada terminal ketikkan command
 ```sh
 $ export EDITOR=/usr/bin/vim
 ```
+
 Untuk cek hasil export variabel dapat melalui 
 ```sh
 $ export -p
 ```
 atau
+
 ```sh
 $ export | grep EDITOR
 ```
@@ -599,7 +601,7 @@ $ ping [host tujuan]
 ![ping1](img/ping1.png)
 
 ##### 3. ssh
-ssh adalah suatu network protokol untuk berkomunikasi secara aman antar komputer. ssh menghubungkan dan masuk(log) ke host yang ditentukan. Command ini dapat meremote server SSH komputer lain untuk menjalankan perintah-perintah dari jarak jauh.
+ssh adalah suatu network protokol untuk berkomunikasi secara aman antar komputer. ssh menghubungkan dan masuk (log) ke host yang ditentukan. Command ini dapat meremote server SSH komputer lain untuk menjalankan perintah-perintah dari jarak jauh.
 
 ssh akan menyediakan koneksi terenkripsi yang aman antara dua host melalui jaringan yang tidak aman. Sambungan ini juga dapat digunakan untuk akses terminal, transfer file, dan untuk tunneling aplikasi lain.
 
@@ -644,44 +646,14 @@ Semua paket yang dibuthkan oleh paket yang akan diinstall juga akan terunduh dan
 
 sub-materi
 
-- [1. VirtualBox Networking Modes](#1-VirtualBox-Networking-Modes)
-- [2. Bridged Networking vs NAT](#2-Bridged-Networking-vs-NAT)
-- [3. Setting IP Address Statis](#3-Setting-IP-Address-Statis)
+- [1. Setting IP Address Statis](#1-Setting-IP-Address-Statis)
   - [a. GUI](#a-GUI)
   - [b. CLI](#b-CLI)
-- [4. Crimping](#wire-crimping)
+- [2. Crimping](#wire-crimping)
+- [3. VirtualBox Networking Modes](#3-VirtualBox-Networking-Modes)
+- [4. Bridged Networking vs NAT](#4-Bridged-Networking-vs-NAT)
 
-### 1. VirtualBox Networking Modes
-
-- Not attached
-
-- Network Address Translation (NAT)
-
-- NAT Network
-
-- Bridged networking
-
-- Internal networking
-
-- Host-only networking
-
-- Generic networking
-
-  
-
-### 2. Bridged Networking vs NAT
-
-![NAT and Bridged network simple diagram](img/0.png)
-
-Dalam diagram ini, garis vertikal di sebelah firewall merepresentasikan jaringan produksi dan kita dapat melihat bahwa 192.168.1.1 adalah alamat IP firewall _organisasi_ yang menghubungkannya ke Internet. Ada juga virtual host dengan tiga mesin virtual yang berjalan di dalamnya. Lingkaran merah mewakili adaptor virtual yang menghubungkan mesin virtual NAT (172.16.1.1). Kita dapat melihat bahwa ada dua mesin virtual seperti itu dengan alamat IP 172.16.1.2 dan 172.16.1.3. Saat kita mengonfigurasi mesin virtual yang menggunakan NAT, ia tidak melihat jaringan _organisasi_ secara langsung. Bahkan, semua lalu lintas yang berasal dari mesin virtual akan menggunakan alamat IP host VM. Di belakang layar, lalu lintas dari mesin virtual diarahkan pada virtual host dan dikirim melalui adaptor fisik host dan, akhirnya, ke Internet.
-
-  
-
-Mesin virtual ketiga (192.168.1.3) dikonfigurasi dalam mode “**bridged**” yang pada dasarnya berarti bahwa adaptor jaringan virtual dalam mesin virtual tersebut dijembatani ke jaringan _organisasi_ dan mesin virtual itu beroperasi seolah-olah ada langsung di jaringan _organisasi_. Seperti mesin virtual berbasis NAT yang tidak dapat melihat jaringan _organisasi_, begitu juga sebalikya, mesin virtual dengan mode bridged network tidak dapat melihat dua mesin virtual berbasis NAT.
-
-  
-
-### 3. Setting IP Address Statis
+### 1. Setting IP Address Statis
 ##### A. GUI
 1. klik ikon koneksi, lalu pilih 'edit'.
 
@@ -719,13 +691,6 @@ dns-search if.its.ac.id
 ```
 $ sudo service networking restart
 ```
-
-##### Referensi :
-- https://www.virtualbox.org/manual/ch06.html#networkingmodes
-- http://techgenix.com/nat-vs-bridged-network-a-simple-diagram-178/
-- https://www.virtualbox.org/manual/ch06.html#networkingmodes
-
-<div style="page-break-after: always;"></div>
 
 ## WIRE CRIMPING
 Dalam membangun jaringan komputer, tentunya dibutuhkan segala hal yang dapat menghubungkan perangkat-perangkat komputer yang ada. Hingga saat ini, komponen paling fundamental dalam jaringan komputer adalah kabel. Sekalipun teknologi nirkabel sudah lama ditemukan dan dikembangkan, tapi peran kabel jaringan tetap belum bisa tergantikan. Oleh karena itu di sini kita akan belajar bagaimana membuat kabel jaringan (dalam hal ini kabel UTP) menjadi fungsional.
@@ -781,6 +746,40 @@ __3. *Cara Crimping*__
 
 - Menguji menggunakan LAN tester, jika semua lampu menyala, berarti kabel tersebut telah di crimping dengan benar dan bisa digunakan.
 
+### 3. VirtualBox Networking Modes
+
+- Not attached
+
+- Network Address Translation (NAT)
+
+- NAT Network
+
+- Bridged networking
+
+- Internal networking
+
+- Host-only networking
+
+- Generic networking
+
+
+### 4. Bridged Networking vs NAT
+
+![NAT and Bridged network simple diagram](img/0.png)
+
+Dalam diagram ini, garis vertikal di sebelah firewall merepresentasikan jaringan produksi dan kita dapat melihat bahwa 192.168.1.1 adalah alamat IP firewall _organisasi_ yang menghubungkannya ke Internet. Ada juga virtual host dengan tiga mesin virtual yang berjalan di dalamnya. Lingkaran merah mewakili adaptor virtual yang menghubungkan mesin virtual NAT (172.16.1.1). Kita dapat melihat bahwa ada dua mesin virtual seperti itu dengan alamat IP 172.16.1.2 dan 172.16.1.3. Saat kita mengonfigurasi mesin virtual yang menggunakan NAT, ia tidak melihat jaringan _organisasi_ secara langsung. Bahkan, semua lalu lintas yang berasal dari mesin virtual akan menggunakan alamat IP host VM. Di belakang layar, lalu lintas dari mesin virtual diarahkan pada virtual host dan dikirim melalui adaptor fisik host dan, akhirnya, ke Internet.
+
+Mesin virtual ketiga (192.168.1.3) dikonfigurasi dalam mode “**bridged**” yang pada dasarnya berarti bahwa adaptor jaringan virtual dalam mesin virtual tersebut dijembatani ke jaringan _organisasi_ dan mesin virtual itu beroperasi seolah-olah ada langsung di jaringan _organisasi_. Seperti mesin virtual berbasis NAT yang tidak dapat melihat jaringan _organisasi_, begitu juga sebalikya, mesin virtual dengan mode bridged network tidak dapat melihat dua mesin virtual berbasis NAT.
+
+
+##### Referensi :
+- https://www.virtualbox.org/manual/ch06.html#networkingmodes
+- http://techgenix.com/nat-vs-bridged-network-a-simple-diagram-178/
+- https://www.virtualbox.org/manual/ch06.html#networkingmodes
+
+<div style="page-break-after: always;"></div>
+
+
 # Penggunaan Aplikasi
 
 ### Instalasi LAMP Stack pada Ubuntu
@@ -818,16 +817,16 @@ __Apache__<br>
 Untuk melihat apakah server apache sudah berjalan, ketikkan command berikut
 
 ```shell
-$ sudo service apache2 status
+sudo service apache2 status
 ```
 
 Jika sudah berjalan, output yang seharusnya adalah sebagai berikut:
 ![apache-status](img/apache-status.png) <br>
 
 ```shell
-$ sudo service apache2 restart
-$ sudo service apache2 stop
-$ sudo service apache2 start
+sudo service apache2 restart
+sudo service apache2 stop
+sudo service apache2 start
 ```
 
 | Command | Kegunaan |
@@ -867,9 +866,9 @@ Jika sudah berjalan, output yang seharusnya adalah sebagai berikut:
 ![mysql-status](img/mysql-status.png)<br>
 
 ```shell
-$ sudo service mysql restart
-$ sudo service mysql stop
-$ sudo service mysql start
+sudo service mysql restart
+sudo service mysql stop
+sudo service mysql start
 ```
 
 
@@ -883,25 +882,43 @@ $ sudo service mysql start
 Untuk masuk ke MySQL command prompt, ketikkan command berikut:
 
 ```shell
-$ sudo mysql -u root -p
+sudo mysql -u root -p
 ```
 
 Command di atas berarti kita akan masuk ke MySQL command prompt sebagai root user. Untuk masuk dengan user yang lain, ubah root dengan username yang sesuai. Pengguna akan diminta memasukkan password sesuai usernamenya. 
 <br>
 Setelah masuk ke MySQL Command Prompt maka tampilannya adalah sebagai berikut:
+
 ![mysql-rohana](img/mysql-rohana.png)<br>
-Pada contoh di atas maka pengguna masuk sebagai rohana. Untuk keluar dari command prompt, ketikkan `exit`.
+Pada contoh di atas maka pengguna masuk sebagai rohana.
+Dalam penggunaan MySQL, *command* yang dijalankan disebut sebagai *query* untuk mengeksekusi apa yang ingin kita lakukan terhadap database yang berada pada MySQL tersebut. Beberapa *query* dasar yang biasa digunakan untuk mengakses database, yaitu :
+   - `SHOW DATABASES` untuk melihat database yang terdapat dalam MySQL tersebut.
+   - `CREATE DATABASE [nama_database]` untuk membuat database baru.
+   - `USE [nama_database]` untuk menggunakan database pada MySQL Server.
+   - Gunakan query `CREATE TABLE` untuk membuat table dalam sebuah database pada MySQL.
+      ```sql
+         CREATE TABLE Pegawai (
+         id int,
+         nama varchar(255),
+         alamat varchar(255),
+         kota varchar(255) );
+      ```
+   - Gunakan query `INSERT` untuk menambahkan data ke dalam sebuah *table* dalam database sesuai dengan kolom yang tersedia.
+      ```sql
+         INSERT INTO Pegawai (id, nama, alamat, kota)
+         VALUES (001, 'ilham', 'perumahan dosen ITS', 'Surabaya');
+      ```
+   - `EXIT` untuk keluar dari command prompt MySQL.
 
 __PHP__<br>
 Untuk memastikan PHP sudah terinstal, buat file berekstensi php pada root folder apache.
-
 ```shell
-$ sudo touch /var/www/html/index.php
+sudo touch /var/www/html/index.php
 ```
 
 Buka file yang sudah dibuat dengan menggunakan text editor:
 ```shell
-$ sudo nano /var/www/html/index.php
+sudo nano /var/www/html/index.php
 ```
 
 Kemudian masukkan baris kode berikut:
@@ -917,15 +934,19 @@ Untuk melihat hasilnya, buka browser dan akses __localhost/index.php__.
 __Referensi__<br>
 + https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
 
-### Setup SSH Keys
-Secure Shell (lebih dikenal sebagai SSH) memungkinkan pengguna untuk melakukan layanan jaringan secara aman pada jaringan yang tidak aman. SSH Keys menyediakan keamanan lebih dibandingkan hanya dengan menggunakan password. Password dapat dipecahkan melalui brute force sedangkan SSH Keys hampir tidak mungkin dipecahkan hanya dengan brute force saja.
+### Mengatur SSH Keys
+Secure Shell (lebih dikenal sebagai SSH) memungkinkan pengguna untuk melakukan layanan jaringan secara aman pada jaringan yang tidak aman. SSH Keys menyediakan keamanan lebih dibandingkan hanya dengan menggunakan password. Password dapat dipecahkan melalui metode *brute force* sedangkan SSH Keys hampir tidak mungkin dipecahkan hanya dengan *brute force* saja.
+SSH Keys menggunakan metode algoritma RSA untuk menghasilkan sebuah pasangan 'kunci'nya, maka SSH Keys juga biasa disebut dengan RSA Key. Sebuah pasangan RSA Key akan terdiri dari ***private key*** (**kunci privat**) dan ***public key*** (**kunci umum**)
 
-#### Create the RSA Key Pair
+#### Membuat Pasangan RSA Key
+
 ```shell
 $ ssh-keygen -t rsa
 ```
 
-#### Store the Keys and Passphrase
+#### Menyimpan Keys dan Passphrase
+
+**SSH Key**
 
 ```shell
 Enter file in which to save the key (/home/rohana/.ssh/id_rsa):
