@@ -421,11 +421,16 @@ Syntax-nya adalah `sudo [command]`
 ![chown-group](img/chown2.png)  
 **Note:** mohon diingat bahwa nama user dan group yang dipilih harus sudah ada di komputer tersebut.
 
-##### 4. passwd
+##### 4. adduser
+*adduser*.
++ Digunakan untuk membuat user baru. Penggunaan perintah ini sangat sederhana, hanya dengan sudo adduser $loginname. Perintah tersebut akan membuat home directory dan user masuk ke default group, lalu sistem akan meminta informasi mengenai user secara rinci.
++ User baru dapat ditambahkan ke dalam group *sudoers* menggunakan perintah `sudo adduser [nama_user] sudo` 
+
+##### 5. passwd
 Digunakan untuk meng-*update* password user.  
 ![passwd](img/passwd.png)  
 
-##### 5. chmod
+##### 6. chmod
 *change mode*. Digunakan untuk mengubah izin akses dari suatu dokumen.
 Contoh syntax `chmod 777 [namafile]`
 *777* adalah representasi dari permission yang diberikan. Angka pertama melambangkan permission untuk user, angka kedua untuk group, dan angka ke tiga untuk *Others*  
