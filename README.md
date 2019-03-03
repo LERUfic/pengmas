@@ -6,6 +6,8 @@
 5. [Networking](#networking)
 6. [Penggunaan Aplikasi](#penggunaan-aplikasi)
 7. [Setup SSH Keys](#setup-ssh-keys)
+8. [Tugas Mandiri](#tugas-mandiri)
+
 
 # Pengenalan
 Sub-materi
@@ -892,10 +894,10 @@ Setelah masuk ke MySQL Command Prompt maka tampilannya adalah sebagai berikut:
 ![mysql-rohana](img/mysql-rohana.png)<br>
 Pada contoh di atas maka pengguna masuk sebagai rohana.
 Dalam penggunaan MySQL, *command* yang dijalankan disebut sebagai *query* untuk mengeksekusi apa yang ingin kita lakukan terhadap database yang berada pada MySQL tersebut. Beberapa *query* dasar yang biasa digunakan untuk mengakses database, yaitu :
-   - `SHOW DATABASES` untuk melihat database yang terdapat dalam MySQL tersebut.
-   - `CREATE DATABASE [nama_database]` untuk membuat database baru.
+   - `SHOW DATABASES;` untuk melihat database yang terdapat dalam MySQL tersebut.
+   - `CREATE DATABASE [nama_database];` untuk membuat database baru.
    - `USE [nama_database]` untuk menggunakan database pada MySQL Server.
-   - Gunakan query `CREATE TABLE` untuk membuat table dalam sebuah database pada MySQL.
+   - Gunakan query `CREATE TABLE;` untuk membuat table dalam sebuah database pada MySQL.
       ```sql
          CREATE TABLE Pegawai (
          id int,
@@ -903,11 +905,15 @@ Dalam penggunaan MySQL, *command* yang dijalankan disebut sebagai *query* untuk 
          alamat varchar(255),
          kota varchar(255) );
       ```
+   - `SHOW TABLES;` untuk melihat table yang ada pada database tersebut.
    - Gunakan query `INSERT` untuk menambahkan data ke dalam sebuah *table* dalam database sesuai dengan kolom yang tersedia.
       ```sql
          INSERT INTO Pegawai (id, nama, alamat, kota)
          VALUES (001, 'ilham', 'perumahan dosen ITS', 'Surabaya');
       ```
+   - `SELECT * FROM [nama_table];` untuk melihat semua isi sebuah table. 
+   - `DROP TABLE [nama_table];` untuk menghapus table dari sebuah database. 
+   - `DROP DATABASE [nama_database];` untuk menghapus database dari MySQL.
    - `EXIT` untuk keluar dari command prompt MySQL.
 
 __PHP__<br>
@@ -1017,3 +1023,11 @@ Dengan menggunakan SSH Key, kita tidak diminta untuk memasukkan password dari pe
 
 __Referensi__<br>
 + https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
+
+# Tugas Mandiri
+
+Berikut adalah beberapa latihan yang dapat dilakukan ketika waktu luang untuk menyempurnakan sesi Pelatihan Linux 2019.
+1. Menggunakan text editor **nano** untuk menuliskan kesan dan pesan serta kritik dan saran terhadap pelaksanaan Pelatihan Linux 2019 di SMAN 1 KEDUNGWARU Tulungagung.
+2. Menampilkan **proses** yang berlangsung pada ubuntu server di Virtualbox menggunakan aplikasi **htop***. (petunjuk : install aplikasi dengan perintah `sudo apt-get install htop`)
+3. Membuat user baru bernama **tux** dengan hak akses superuser (*sudoers**) pada ubuntu server di Virtualbox. (petunjuk : sudoers adalah group untuk *superuser*)
+4. Mengatur hak akses file untuk user **tux** dengan hanya pemilik file yang dapat membaca, menulis, dan mengeksekusi. (petunjuk : ketentuan `700`)
