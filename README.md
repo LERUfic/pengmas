@@ -934,8 +934,20 @@ Kemudian masukkan baris kode berikut:
 ?>
 ```
 
-Untuk melihat hasilnya, buka browser dan akses __localhost/index.php__.
+Untuk melihat hasilnya, buka browser dan akses alamat __[IP server]/index.php__.
 ![php-info](img/php-info.png)<br>
+
+**Note**
+
+Jika halaman belum muncul seperti pada gambar di atas, silakan install library php untuk apache2 web server dengan menjalankan `sudo apt-get install libapache2-mod-php`.
+
+Cara lain untuk mencoba, dapat dicoba dengan memasukkan kode berikut pada file index.php, lalu akses kembali alamat __[IP server]/index.php__ melalui browser laptop masing-masing.
+
+```php
+<?php
+   echo "Coba PHP di Web Server Apache pada waktu Pelatihan Linux 2019";
+?>
+```
 
 __Referensi__<br>
 + https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
