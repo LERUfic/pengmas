@@ -299,6 +299,7 @@ Untuk keluar dari tampilan manual tersebut kita tinggal menekan tombol `q`.
 ![man](img/manls.png)
 *man pages* atau perintah `man` juga memiliki keunikan dalam *device* **FreeBSD** dan **Linux** karena membagi *man pages* kedalam beberapa bagian seperti dalam tabel dibawah ini.
 ![man](img/man-pages.png)
+
 Sebagai contohnya, didalam **Linux** biasanya terdapat file `passwd` dan perintah `passwd`. Jika kita menjalankan perintah
 + `man passwd` maka perintah `man` akan memberikan *manuals* untuk perintah `passwd`
 ![man](img/man-command-passwd.png)
