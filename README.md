@@ -295,8 +295,18 @@ Parameter yang sering dipakai pada perintah ls adalah `-a` dan `-l`.
 ##### 3. man
 *manuals*. Digunakan untuk melihat fungsi dan parameter dari suatu comman
 Contoh `man ls` akan menampilkan manual penggunaan command `ls`.
-Untuk keluar dari tampilan manual tersebut kita tinggal menekan tombol `q`.  
+Untuk keluar dari tampilan manual tersebut kita tinggal menekan tombol `q`. 
 ![man](img/manls.png)
+*man pages* atau perintah `man` juga memiliki keunikan dalam *device* **FreeBSD** dan **Linux** karena membagi *man pages* kedalam beberapa bagian seperti dalam tabel dibawah ini.
+![man](img/man-pages.png)
+Sebagai contohnya, didalam **Linux** biasanya terdapat file `passwd` dan perintah `passwd`. Jika kita menjalankan perintah
++ `man passwd` maka perintah `man` akan memberikan *manuals* untuk perintah `passwd`
+![man](img/man-command-passwd.png)
++ Namun jika menjalankan perintah `man 5 passwd` maka akan memberikan *manuals* untuk file `passwd` 
+![man](img/man-file-passwd.png)
+
+Untuk mengetahui ada berapa bagian *manual* yang tersedia, kita dapat menjakankan perintah `man -k [kata yang dicari]`
+![man](img/man-option-k.png)
 
 ##### 4. cd
 *change directory*. Digunakan untuk pindah ke directory lain. Syntax-nya adalah ```cd [namadirectory]```.
@@ -1040,6 +1050,7 @@ Dengan menggunakan SSH Key, kita tidak diminta untuk memasukkan password dari pe
 
 __Referensi__<br>
 + https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
++ Unix and Linux System Administration Handbook Fifth Edition
 
 # Tugas Mandiri
 
